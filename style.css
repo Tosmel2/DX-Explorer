@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Inter', sans-serif;
+}
+.row{
+  max-width: 90%;
+  margin: 0 auto;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+nav .explorer__logo{
+  padding: 2rem;
+}
+nav .explorer__logo a{
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  color: #fff;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+}
+nav ul li{
+  color: #fff;
+  font-size: 1rem;
+  padding: 2rem 4rem;
+  font-weight: bold;
+}
+.hero__content-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__content{
+  width: 45%;
+  height: 70vh;
+  padding: 7% 3%;
+}
+.hero__content h1{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+.hero__content h1,p{
+  margin: 2rem 0;
+}
+.hero__content p{
+  margin-bottom: 2rem;
+  font-size: 20px;
+  padding: 0;
+  line-height: 1.8;
+  color: #fff;
+}
+.hero__content .hero__btn{
+  padding: 0.5rem;
+  background: #FF6347;
+  border-radius: 30px;
+  border-radius: 15px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* ============Hero section ============= */
+.hero__container{
+  /* background: url('/img/exploreBg.png') no-repeat center center/cover; */
+  background: linear-gradient(0deg, rgba(255, 99, 71, 0.35), rgba(255, 99, 71, 0.35)), url('/img/exploreBg.png');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ===========cards section================ */
+.card-container{
+  padding: 5rem 0;
+}
+
+.card-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.card-row .card-boxes{
+  color: #fff;
+  width: 32%;
+  padding: 2rem;
+  background: #FF6347;
+  box-shadow: 7px 11px 20px -10px rgba(0, 0, 0, 0.33);
+  border-radius: 20px;
+}
+.card-row .card-boxes h2{
+  margin-bottom: 1rem;
+}
+.started-btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #FF6347;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+.btn-margin{
+  margin-top: 1rem;
+}
+
+/* ===========footer section ============= */
+.sub-footer1-container{
+  background: #FF6347;
+}
+.sub-footer1-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0
+}
+.sub-footer1-container h2{
+  color: #fff;
+  font-size: 30px;
+}
+.sub-footer2-container{
+  background: #000;
+  padding: 0px 60px;
+}
+.sub-footer2-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-footer2-content p{
+  color: #fff;
+}
+.sub-footer2-content .sub-footer-icon{
+  margin-right: 30px;
+}
+.sub-footer2-content .sub-footer-icon i{
+  color: #fff;
+  padding: 25px 2px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ============hamburger menu ============= */
+.backdrop {
+  background: rgba(0, 0, 0, 0.05);
+  top: 0;
+  left: 0;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.nav__mobile {
+  display: none;
+}
+.nav__mobileBrand{
+  display: none;
+}
+.mobile__logo a{
+  color: #fff;
+  font-size: 25px;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav__Mobilelinks {
+  display: none;
+  z-index: 2 !important;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #ff6347;
+  /* box-shadow: -6px -20px 5px 1px rgb(0 0 0 / 5%); */
+}
+
+.nav__Mobilelinks ul li{
+  padding: 20px 30px;
+  list-style: none;
+  color: #fff;
+  font-weight: bold;
+}
+.nav__Mobilelinks ul li:hover{
+  background: #eb735e;
+}
+
+#barbox {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.bar {
+  cursor: pointer;
+  height: 3px;
+  width: 100%;
+  margin: 6px 0;
+  background-color: #fff;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.change #bar1 {
+  transform: translateY(9px) rotate(-45deg);
+}
+.change #bar2 {opacity: 0;}
+
+.change #bar3 {
+    transform: translateY(-9px) rotate(45deg);
+}
+.change {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (max-width:900px){
+  nav{
+    display: none;
+  }
+  .card-row{
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .card-row .card-boxes{
+    width: 100%;
+    margin: 10px 0;
+  }
+  .hero__content-box{
+    flex-direction: column-reverse;
+  }
+  .hero__content{
+    width: 100%;
+    padding: 15% 8%;
+  }
+  .hero__content h1{
+    font-size: 1.5rem;
+  }
+  .card-row{
+    margin: 10px 0;
+  }
+  .card-container{
+    padding: 3rem 0;
+  }
+  .sub-footer2-content{
+    flex-direction: column;
+  }
+  .sub-footer2-container{
+    padding: 0 20px;
+  }
+  .sub-footer2-content p{
+    text-align: center;
+  }
+  .sub-footer2-content .sub-footer-icon{
+    margin-top: 0;
+    text-align: center;
+  }
+  .sub-footer2-content .sub-footer-icon i{
+    padding: 5px 5px 10px 5px;
+    color: #fff;
+  }
+  .nav__mobile {
+    background: #ff6347;
+    box-shadow: 10px 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    width: 100%;
+  }
+  .nav__mobileBrand{
+    display: flex;
+  }
+}
+
+@media screen and (max-width:680px){
+  .hero__content h1{
+    font-size: 1.3rem;
+  }
+  .hero__content p{
+    margin-bottom: 2rem;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #fff;
+  }
+  .sub-footer1-container h2{
+    color: #fff;
+    font-size: 25px;
+  }
+  .started-btn{
+    padding: 8px 15px;
+    font-size: 15px;
+  }
+}
